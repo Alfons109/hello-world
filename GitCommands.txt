@@ -49,14 +49,20 @@ git checkout [branch_name]
 --Commit your changes
 git commit -m "comment"
 
+--Push branch to remote repository
+git push -u origin [branch_name]
+
 --Merge your changes from the branch into the master branch
 --Make sure you are on the Master Branch
 --Merge Conflicts can occur when changes are made to a file at the same time, you just need to decide which code to keep
 git merge [branch_name]
 
---Delete a branch
+--Delete a local branch
 -- NOTE: '-d' option won't let you delete something that hasn't been merged, use '-f' to delete,
 git branch -d <branch name>
+
+--Delete a remote branch
+git push origin --delete [branch_name]
 
 --Push everything you've been working on to your remote repository,
 git push

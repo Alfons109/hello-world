@@ -1,0 +1,63 @@
+######Git Initial Setup (done only once)
+git config --global user.name "YOUR NAME"
+--private email
+git config --global user.email "username@users.noreply.github.com"
+
+
+######Romote/Origin
+--To push our local repo to the GitHub server we'll need to add a remote repository.
+--This command takes a remote name and a repository URL
+git remote add [remote name] [url]
+
+
+######Local Staging/Repository Commands
+git init -- initialize new folder/repositor
+git add ['filename'] or ['*.txt'] -- add file to staging
+git status -- check repository status
+git commit -m "message" -- commit changes to repository with message note
+git log --journal of all commits
+
+--The push command tells Git where to put our commits when we're ready
+--Push our local changes to our origin repository (on GitHub)
+--The name of our remote repository is "origin" and the default local branch name is "master"
+--The -u tells Git to remember the parameters, so that next time we can simply run git push and Git will know what to do.
+git push -u origin master
+
+--We can check for changes on our GitHub repository and pull down any new changes by running:
+git pull origin master
+
+--Sometimes when you go to pull you may have changes you don't want to commit just yet. One option you have, other than commiting, is to stash the changes.
+--Use the command 'git stash' to stash your changes, and 'git stash apply' to re-apply your changes after your pull.
+git stash
+
+--Files can be changed back/UNDO to how they were at the last commit by using the command:
+--"--" It's simply promising the command line that there are no more options after the '--'. 
+--This way if you happen to have a branch named octocat.txt, it will still revert the file, instead of switching to the branch of the same name.
+git checkout -- <fileNameTarget>
+
+--git rm command which will not only remove the actual files from disk, but will also stage the removal of the files for us.
+--use '-r' option to recursively remove a folder
+git rm [fileName]
+
+--Branching Out/Creating a New Branch
+--You can use: git checkout -b new_branch, to checkout and create a branch at the same time. This is the same thing as doing:
+git branch [branch_name]
+
+--Switching Branches
+git checkout [branch_name]
+
+--Commit your changes
+git commit -m "comment"
+
+--Merge your changes from the branch into the master branch
+--Make sure you are on the Master Branch
+--Merge Conflicts can occur when changes are made to a file at the same time, you just need to decide which code to keep
+git merge [branch_name]
+
+--Delete a branch
+-- NOTE: '-d' option won't let you delete something that hasn't been merged, use '-f' to delete,
+git branch -d <branch name>
+
+--Push everything you've been working on to your remote repository,
+git push
+

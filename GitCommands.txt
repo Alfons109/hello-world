@@ -64,6 +64,9 @@ git branch -d <branch name>
 --Delete a remote branch
 git push origin --delete [branch_name]
 
+--Listing of all remote branches
+git ls-remote --heads origin
+
 --Push everything you've been working on to your remote repository,
 git push
 

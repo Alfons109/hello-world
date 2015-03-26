@@ -49,6 +49,13 @@ git checkout [branch_name]
 --Commit your changes
 git commit -m "comment"
 
+--Remove local (untracked) files from my current Git branch, 
+--If you want to remove directories
+git clean -f -d 
+
+-If you want to remove ignored files
+git clean -f -X 
+
 --Push branch to remote repository
 git push -u origin [branch_name]
 

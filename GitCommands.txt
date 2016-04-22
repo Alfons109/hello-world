@@ -77,3 +77,8 @@ git ls-remote --heads origin
 --Push everything you've been working on to your remote repository,
 git push
 
+--Erase Commit History and put all changes in staged
+git reset --soft ####HASH of Commit you want to reset to####
+
+--Erase Commit History and DELETE changes up to the commit hash specified
+git reset --hard ####HASH of Commit you want to delete to####
